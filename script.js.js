@@ -8,8 +8,8 @@ buttons.forEach((button) => {
       display.value = "";
     } else if (isi === "=") {
       try {
-        display.value = eval(display.value);
-        console.log(display.value);
+        if(display.value === "") display.value = ""
+        else display.value = eval(display.value);
       } catch (error) {
         display.value = "Error";
       }
